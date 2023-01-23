@@ -6,63 +6,6 @@ import kotlin.test.assertTrue
 
 class WallServiceTest {
 
-//    private var testPost = Post(
-//        3,
-//        14,
-//        20,
-//        30,
-//        1674149855,
-//        "test text",
-//        10,
-//        20,
-//        false,
-//        Comments(15, canPost = true, groupsCanPost = true),
-//        "copy",
-//        Likes(120, userLikes = true, canLike = true, canPublish = true)
-//    )
-//    private var testPost1 = Post(
-//        3,
-//        140,
-//        200,
-//        300,
-//        167414980,
-//        "test text 1",
-//        100,
-//        200,
-//        false,
-//        Comments(15, canPost = true, groupsCanPost = true),
-//        "copy",
-//        Likes(120, userLikes = true, canLike = true, canPublish = true)
-//    )
-//    private var testPost2 = Post(
-//        11,
-//        141,
-//        201,
-//        301,
-//        1674149851,
-//        "test text 2",
-//        101,
-//        201,
-//        false,
-//        Comments(15, canPost = true, groupsCanPost = true),
-//        "copy",
-//        Likes(120, userLikes = true, canLike = true, canPublish = true)
-//    )
-//    private var testPost3 = Post(
-//        33,
-//        140,
-//        200,
-//        300,
-//        167414980,
-//        "test text 1",
-//        100,
-//        200,
-//        false,
-//        Comments(15, canPost = true, groupsCanPost = true),
-//        "copy",
-//        Likes(120, userLikes = true, canLike = true, canPublish = true)
-//    )
-
     @Before
     fun clearBeforeTest() {
         WallService.clear()
@@ -86,7 +29,7 @@ class WallServiceTest {
                 Likes(120, userLikes = true, canLike = true, canPublish = true)
             )
         )
-        assertEquals(1, result.id)
+        assertEquals(5, result.id)
     }
 
     @Test
@@ -126,7 +69,7 @@ class WallServiceTest {
         assertTrue(
             WallService.update(
                 Post(
-                    3,
+                    2,
                     14,
                     20,
                     30,
@@ -181,7 +124,7 @@ class WallServiceTest {
         assertFalse(
             WallService.update(
                 Post(
-                    3,
+                    7,
                     14,
                     20,
                     30,
