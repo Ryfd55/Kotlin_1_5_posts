@@ -9,6 +9,17 @@ data class Post(
     val replyPostId: Int=0,
     val friendsOnly: Boolean = false,
     val comments: Comments,
-    val post_type: String ="asgafs data class post",
-    val likes: Likes
+    val postType: String ="asgafs data class post",
+    val likes: Likes,
+    val reposts: Reposts,
+    val postSource: PostSource,
+    val geo: Geo,
+    val singerId: Int,
+//    val copyHistory:,
+    val canPin: Boolean = false,
+    val canDelete: Boolean = false,
+    val canEdit: Boolean = false,
+    val isPinned: Boolean = false,
+    val markedAsAds: Boolean = false,
+    val isFavourite: Boolean = false
 )

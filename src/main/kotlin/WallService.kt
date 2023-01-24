@@ -4,11 +4,14 @@ object WallService {
 
     fun clear() {
         posts = emptyArray()
+        nextIdPost = 0
     }
 
     fun add(post: Post): Post {
-        nextIdPost++
-        posts += post.copy(id = nextIdPost)
+
+        posts += post.copy(id = ++nextIdPost)
+//        nextIdPost++
+//        posts += post.copy(id = nextIdPost)
         return posts.last()
     }
 
@@ -23,7 +26,7 @@ object WallService {
                     replyPostId = targetPost.replyPostId,
                     friendsOnly = targetPost.friendsOnly,
                     comments = targetPost.comments,
-                    post_type = targetPost.post_type,
+                    postType = targetPost.postType,
                     likes = targetPost.likes
                 )
                 return true
