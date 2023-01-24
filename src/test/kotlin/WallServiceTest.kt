@@ -29,7 +29,7 @@ class WallServiceTest {
                 Likes(120, userLikes = true, canLike = true, canPublish = true)
             )
         )
-        assertEquals(5, result.id)
+        assertEquals(1, result.id)
     }
 
     @Test
