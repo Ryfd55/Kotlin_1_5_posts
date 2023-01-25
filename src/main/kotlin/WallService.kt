@@ -10,8 +10,6 @@ object WallService {
     fun add(post: Post): Post {
 
         posts += post.copy(id = ++nextIdPost)
-//        nextIdPost++
-//        posts += post.copy(id = nextIdPost)
         return posts.last()
     }
 

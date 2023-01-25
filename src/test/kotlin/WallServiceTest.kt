@@ -26,7 +26,10 @@ class WallServiceTest {
                 false,
                 Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
-                Likes(120, userLikes = true, canLike = true, canPublish = true)
+                Likes(120, userLikes = true, canLike = true, canPublish = true),
+                reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
+                null, 0,
+                null, false, false, false, false, false, false
             )
         )
         assertEquals(1, result.id)
@@ -47,7 +50,10 @@ class WallServiceTest {
                 false,
                 Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
-                Likes(120, userLikes = true, canLike = true, canPublish = true)
+                Likes(120, userLikes = true, canLike = true, canPublish = true),
+                reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
+                null, 0,
+                null, false, false, false, false, false, false
             )
         )
         WallService.add(
@@ -63,7 +69,10 @@ class WallServiceTest {
                 false,
                 Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
-                Likes(120, userLikes = true, canLike = true, canPublish = true)
+                Likes(120, userLikes = true, canLike = true, canPublish = true),
+                reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
+                null, 0,
+                null, false, false, false, false, false, false
             )
         )
         assertTrue(
@@ -80,7 +89,10 @@ class WallServiceTest {
                     false,
                     Comments(15, canPost = true, groupsCanPost = true),
                     "copy",
-                    Likes(120, userLikes = true, canLike = true, canPublish = true)
+                    Likes(120, userLikes = true, canLike = true, canPublish = true),
+                    reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
+                    null, 0,
+                    null, false, false, false, false, false, false
                 )
             )
         )
@@ -102,7 +114,10 @@ class WallServiceTest {
                 false,
                 Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
-                Likes(120, userLikes = true, canLike = true, canPublish = true)
+                Likes(120, userLikes = true, canLike = true, canPublish = true),
+                reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
+                null, 0,
+                null, false, false, false, false, false, false
             )
         )
         WallService.add(
@@ -118,7 +133,10 @@ class WallServiceTest {
                 false,
                 Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
-                Likes(120, userLikes = true, canLike = true, canPublish = true)
+                Likes(120, userLikes = true, canLike = true, canPublish = true),
+                reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
+                null, 0,
+                null, false, false, false, false, false, false
             )
         )
         assertFalse(
@@ -135,7 +153,10 @@ class WallServiceTest {
                     false,
                     Comments(15, canPost = true, groupsCanPost = true),
                     "copy",
-                    Likes(120, userLikes = true, canLike = true, canPublish = true)
+                    Likes(120, userLikes = true, canLike = true, canPublish = true),
+                    reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
+                    null, 0,
+                    null, false, false, false, false, false, false
                 )
             )
         )
