@@ -1,4 +1,6 @@
-class VideoAttachments(video: Video) : Attachment() {
+package attachment
+
+class VideoAttachments(val video: Video) : Attachment() {
     override val type: String = "Video"
 }
 

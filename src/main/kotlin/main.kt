@@ -1,3 +1,4 @@
+import attachment.VideoAttachments
 fun main() {
     val likes = Likes(234, true, true, true)
     val comments = Comments(1, canPost = true, groupsCanPost = true)
@@ -8,8 +9,7 @@ fun main() {
         comments, "post", likes,
         reposts = Reposts(0, false), postSource = PostSource(Type.Vk, Platform.Android, "www"),
         null, 0,
-        null, false, false, false, false, false, false,
-
+        null, false, false, false, false, false, false
     )
     var post2 = Post(
         2, 14, 536, 657, 1674149530, "bal-bla-bla",

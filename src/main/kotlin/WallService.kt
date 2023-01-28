@@ -25,7 +25,8 @@ object WallService {
                     friendsOnly = targetPost.friendsOnly,
                     comments = targetPost.comments,
                     postType = targetPost.postType,
-                    likes = targetPost.likes
+                    likes = targetPost.likes,
+                    attachments = targetPost.attachments
                 )
                 return true
             }
