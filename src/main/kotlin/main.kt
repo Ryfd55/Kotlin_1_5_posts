@@ -1,4 +1,9 @@
 import attachment.VideoAttachments
+import attachment.AudioAttachments
+import attachment.PhotoAttachments
+import attachment.GraffitiAttachments
+import attachment.LinkAttachments
+
 fun main() {
     val likes = Likes(234, true, true, true)
     val comments = Comments(1, canPost = true, groupsCanPost = true)
