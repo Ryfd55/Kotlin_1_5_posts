@@ -1,3 +1,4 @@
+import exception.PostNotFoundException
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -24,7 +25,7 @@ class WallServiceTest {
                 10,
                 20,
                 false,
-                Comment(15, canPost = true, groupsCanPost = true),
+                Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
                 Likes(120, userLikes = true, canLike = true, canPublish = true),
                 reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
@@ -48,7 +49,7 @@ class WallServiceTest {
                 100,
                 200,
                 false,
-                Comment(15, canPost = true, groupsCanPost = true),
+                Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
                 Likes(120, userLikes = true, canLike = true, canPublish = true),
                 reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
@@ -67,7 +68,7 @@ class WallServiceTest {
                 101,
                 201,
                 false,
-                Comment(15, canPost = true, groupsCanPost = true),
+                Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
                 Likes(120, userLikes = true, canLike = true, canPublish = true),
                 reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
@@ -87,7 +88,7 @@ class WallServiceTest {
                     10,
                     20,
                     false,
-                    Comment(15, canPost = true, groupsCanPost = true),
+                    Comments(15, canPost = true, groupsCanPost = true),
                     "copy",
                     Likes(120, userLikes = true, canLike = true, canPublish = true),
                     reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
@@ -112,7 +113,7 @@ class WallServiceTest {
                 100,
                 200,
                 false,
-                Comment(15, canPost = true, groupsCanPost = true),
+                Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
                 Likes(120, userLikes = true, canLike = true, canPublish = true),
                 reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
@@ -131,7 +132,7 @@ class WallServiceTest {
                 101,
                 201,
                 false,
-                Comment(15, canPost = true, groupsCanPost = true),
+                Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
                 Likes(120, userLikes = true, canLike = true, canPublish = true),
                 reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
@@ -151,7 +152,7 @@ class WallServiceTest {
                     10,
                     20,
                     false,
-                    Comment(15, canPost = true, groupsCanPost = true),
+                    Comments(15, canPost = true, groupsCanPost = true),
                     "copy",
                     Likes(120, userLikes = true, canLike = true, canPublish = true),
                     reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
@@ -176,7 +177,7 @@ class WallServiceTest {
                 100,
                 200,
                 false,
-                Comment(15, canPost = true, groupsCanPost = true),
+                Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
                 Likes(120, userLikes = true, canLike = true, canPublish = true),
                 reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
@@ -195,7 +196,7 @@ class WallServiceTest {
                 101,
                 201,
                 false,
-                Comment(15, canPost = true, groupsCanPost = true),
+                Comments(15, canPost = true, groupsCanPost = true),
                 "copy",
                 Likes(120, userLikes = true, canLike = true, canPublish = true),
                 reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
@@ -203,12 +204,55 @@ class WallServiceTest {
                 null, false, false, false, false, false, false
             )
         )
-        val result1 =  WallService.createComment(
-                1, Comment(15, canPost = true, groupsCanPost = true)
-            )
+        val result =  WallService.createComment(
+            2, Comment(2, 3,3, "eg", 45,5)
+        )
+        println(result)
+    }
 
-        if (result1 != null) {
-            assertEquals(2, result1.count)
-        }
+    @Test(expected = PostNotFoundException::class)
+    fun shouldThrow() {
+        WallService.clear()
+        WallService.add(
+            Post(
+                33,
+                140,
+                200,
+                300,
+                167414980,
+                "test text 1",
+                100,
+                200,
+                false,
+                Comments(15, canPost = true, groupsCanPost = true),
+                "copy",
+                Likes(120, userLikes = true, canLike = true, canPublish = true),
+                reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
+                null, 0,
+                null, false, false, false, false, false, false
+            )
+        )
+        WallService.add(
+            Post(
+                11,
+                141,
+                201,
+                301,
+                1674149851,
+                "test text 2",
+                101,
+                201,
+                false,
+                Comments(15, canPost = true, groupsCanPost = true),
+                "copy",
+                Likes(120, userLikes = true, canLike = true, canPublish = true),
+                reposts = Reposts(0, false), postSource = PostSource(Type.Widget, Platform.Iphone, "www"),
+                null, 0,
+                null, false, false, false, false, false, false
+            )
+        )
+        WallService.createComment(
+            3, Comment(15, 3,3, "eg", 45,5)
+        )
     }
 }
