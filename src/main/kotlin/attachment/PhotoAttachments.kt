@@ -1,6 +1,6 @@
 package attachment
 
-class PhotoAttachments(photo: Photo) : Attachment() {
+class PhotoAttachments(val photo: Photo) : Attachment() {
     override val type: String = "Photo"
 }
 

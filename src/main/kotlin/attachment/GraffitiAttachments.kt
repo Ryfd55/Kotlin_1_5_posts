@@ -1,6 +1,6 @@
 package attachment
 
-class GraffitiAttachments(graffiti: Graffiti) : Attachment() {
+class GraffitiAttachments(val graffiti: Graffiti) : Attachment() {
     override val type: String = "Graffiti"
 }
 

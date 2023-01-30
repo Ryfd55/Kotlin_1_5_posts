@@ -1,6 +1,6 @@
 package attachment
 
-class AudioAttachments(audio: Audio) : Attachment() {
+class AudioAttachments(val audio: Audio) : Attachment() {
     override val type: String = "Audio"
 }
 
