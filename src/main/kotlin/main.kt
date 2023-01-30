@@ -6,7 +6,7 @@ import attachment.LinkAttachments
 
 fun main() {
     val likes = Likes(234, true, true, true)
-    val comments = Comments(1, canPost = true, groupsCanPost = true)
+    val comments = Comment(1, canPost = true, groupsCanPost = true)
 
     var post1 = Post(
         1, 134, 56, 65, 1674149830, "bal-bla",
