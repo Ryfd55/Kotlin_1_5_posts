@@ -1,6 +1,6 @@
 import attachment.Attachment
 
-data class Comment (
+data class Comment(
     val id: Int,
     val fromId: Int,
     val date: Int,
@@ -9,4 +9,4 @@ data class Comment (
     val replyToComment: Int,
     val attachments: Array<Attachment>? = emptyArray(),
     val complaint: Complaint
-    )
+)

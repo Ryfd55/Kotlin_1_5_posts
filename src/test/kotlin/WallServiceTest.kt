@@ -152,7 +152,7 @@ class WallServiceTest {
         )
     }
 
-    @Test (expected = PostNotFoundException::class)
+    @Test(expected = PostNotFoundException::class)
     fun shouldThrowNoPostEx() {
         WallService.clear()
         WallService.add(post1)
@@ -163,7 +163,7 @@ class WallServiceTest {
         )
     }
 
-    @Test (expected = ReasonNotFoundException::class)
+    @Test(expected = ReasonNotFoundException::class)
     fun shouldThrowReasonEx() {
         WallService.clear()
         WallService.add(post1)
