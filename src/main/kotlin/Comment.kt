@@ -7,5 +7,6 @@ data class Comment (
     val text: String,
     val replyToUser: Int,
     val replyToComment: Int,
-    val attachments: Array<Attachment>? = emptyArray()
+    val attachments: Array<Attachment>? = emptyArray(),
+    val complaint: Complaint
     )
